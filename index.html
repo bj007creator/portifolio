@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=3" media="screen" />
+    <script src="./script.js"></script>
+    <title>Portifólio</title>
+</head>
+<body onload="init()" style="background-image: url('./fundo.png')">
+    <div class="div-principal">
+        <img src="./primeira.png" alt="notebook">
+        <div>
+            <iframe class="invisivel" src="./lifeup/index.html" frameborder="0" ></iframe>
+        </div>
+    </div>
+    <div id="git">
+        GitHub : <a href="https://github.com/mateus-coder">mateus-Coder</a> e <br> <a href="https://github.com/bj007creator">bj007creator</a> ambos eu utilizo <br>
+        <p>Clique no teclado quando quiser mudar<br>de Projeto e clique no computador para ver os projetos</p>
+    </div>
+    
+    <script>
+        function init(){
+            let imagem = document.querySelector(".div-principal > img");
+            imagem.addEventListener('click', funcaoAnimacao, false);
+        }
+    </script>
+</body>
+</html>

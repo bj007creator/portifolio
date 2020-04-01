@@ -1,0 +1,87 @@
+@font-face{
+    src: url("./fonts/font-boa.otf");
+    font-family: font-boa;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.invisivel{
+    display: none;
+}
+a{
+    font-weight: bolder;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+#git{
+    font-family: 'font-boa';
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgb(0, 60, 255);
+    margin-left: 0px;
+    background-color: white;
+}
+
+@media screen and (max-width : 1280px){
+    .div-principal > div > iframe{
+        overflow-x: none;
+        width : 955px;
+        height : 470px;
+    }
+    .div-principal > div{
+        max-width: 1280px;
+        position: absolute;
+        left: 171px;
+        top: 70px;
+    }
+    .div-principal{
+        text-align: center;
+        margin: 0 auto;
+        max-width: 1280px;
+        height: 1000px;
+    }
+    .div-principal > img{
+        max-width: 1280px;
+        height: 1000px;
+        /*border: 2px solid orange;*/
+        margin: 0;
+    }
+}
+@media screen and (min-width : 1281px){
+    .div-principal > div > iframe{
+        overflow-x: none;
+        width : 1011px;
+        height : 475px;
+        position: absolute;
+        left: 177px;
+    }
+    .div-principal > div{
+        max-width: 2400px;
+        position: absolute;
+        left: 5%;
+        top: 70px;
+    }
+    .div-principal{
+        margin : 0;
+        width: 100%;
+        height: 1000px;
+    }
+    .div-principal > img{
+        margin-left : 5%;
+        width: 1350px;
+        height: 1000px;
+        /*border: 2px solid orange;*/
+    }
+}
+@media screen and (min-width: 1670px){
+    .div-principal > img{
+        margin-left : 20%;
+    }
+    .div-principal > div{
+        left: 20%;
+    }
+}
+

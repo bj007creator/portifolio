@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#E6AA33">
+  <title>Life Up</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link href="../fontawesome/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="./escada.css">
+  <link rel="shortcut icon" href="../images/favicon.png" />
+  <script src="../db.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+</head>
+<body style="background: url(../images/Escada/background.webp)"  onload="initSport()">
+  <header>
+      <h1 style="display: none;">Life Up</h1><a href="../index.html"><img class="logo" src="../images/logo.gif"/></a>
+      <nav>
+        <div id="menu">
+          <ul>
+            <li class="IMC"><a href="./Imc.html"><i class="fas fa-male"></i><span> IMC.fy</span></a></li>
+            <li class="Water"><a href="./Water.html"><i class="fas fa-tint"></i><span> Water.fy</span></a></li>
+            <li class="Sport" style="background: #74BC2D;"><a style="color: rgb(0, 0, 0);" href="./Escada.html"><i class="fas fa-hiking"></i><span> Sport.fy</span></a></li>
+            <li class="Diet"><a style="color:rgb(255, 255, 255);" href="./Diet.html"><i class="fas fa-carrot"></i><span> Diet.fy</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+<section id="topo">
+  <img src="../images/Escada/topo.png" style="max-height: 500px;max-width: 100%;width: auto;" alt="a">
+</section>
+<section id="mapa-do-tesouro">
+  <div class="indice"  onclick="funcaoAtividade1('0', 1, 'Atividade 1 : Corrida ', '../gifsExercicios/corrida.gif', 'A um sinal dado, os jogadores deverão depositar a laranja ou a bola em local determinado.Será vencedor aquele que executar a tarefa primeiro.');">
+    <img src="../images/Escada/Sprite1.png">
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('1', 1, 'Atividade 2 : Os cinco pulos ', '../gifsExercicios/cincoPulos.gif', 'Número de participantes: de 2 a 5. Os participantes devem se colocar lado a lado numa linha imaginária. Dado o sinal, todas dão cinco pulos para a frente. Ganha quem parar mais longe.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('2', 1, 'Atividade 3 : Corrida de canguru ', '../gifsExercicios/corridaCanguru.gif', 'Número de participantes: a partir de 2. Os jogadores se dividem em duas equipes e formam filas indianas. Dado o sinal da largada, a criança do início da fila coloca uma bola entre os joelhos e avança aos saltos até a linha de chegada; depois retorna e entrega a bola ao participante seguinte. O time vencedor será aquele em que todos os jogadores completarem o percurso primeiro.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('3', 1, 'Atividade 4 : Costas com costas ', '../gifsExercicios/costasComCostas.gif', 'Número de participantes: a partir de 3. Uma das crianças é escolhida como perseguidor. As demais devem se dividir em duplas, e ficar um de costas para o outro e com os braços enganchados. A um sinal do perseguidor, todas as duplas se desfazem e devem procurar novos parceiros. O jogador que sobrar é o novo perseguidor.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('4', 1, 'Atividade 5 : Detetive ', '../gifsExercicios/detetive.gif', 'Número de participantes: a partir de 3. Para essa brincadeira, você vai precisar escrever num papel a inicial A (de assassino), em outro D (de detetive) e os outros com o V (de vítima) – some todos os participantes e subtraia dois para saber quantas vítimas o jogo terá. Misture e deixe cada criança pegar um papel sem saber o que é. O assassino precisa “matar” o maior número de vítimas e, para isso, ele deve piscar discretamente para as pessoas. Quando as vítimas forem atingidas, elas devem dizer “morri” e abaixar a cabeça. Caso o detetive perceba as piscadas, ele deve dizer ao assassino: “Preso em nome da lei”.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+
+  <div class="indice" onclick="funcaoAtividade1('5', 1, 'Atividade 10 : Pular corda ', '../gifsExercicios/pularCorda.gif', 'O Pular corda ou saltar corda é uma brincadeira tradicional que envolve grande atividade física e coordenação motora. Tais características fizeram da recreação um desporto. Nesse sentido, a prática esportiva do pula-corda, também referida como salto à corda (em inglês: rope skipping, jump rope, double dutch)');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('6', 1, 'Atividade 9 : Pega-pega ', '../gifsExercicios/pegaPega.gif', 'O pega-pega é uma brincadeira infantil muito conhecida. De modo geral, o jogo consiste em dois tipos de jogadores, os pegadores e os que devem evitar ser apanhados. Cada variante do jogo possui uma forma diferente de se estabelecer como os demais serão pegos, em geral por meio de um toque. Quem for tocado, automaticamente vira o pegador a depender do modo da brincadeira.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('7', 1, 'Atividade 8 : Morto-vivo ', '../gifsExercicios/mortoVivo.gif', 'Número de participantes:a partir de 2. Coloque as crianças em uma fila. Uma delas (que precisa estar fora da fila) ou você mesmo, fica de frente. Quando disser “morto”, elas devem se abaixar. E quando for “vivo”, elas precisam estar de pé. O condutor deve ir alternando as palavras e a velocidade. Quem errar, está fora da brincadeira.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('8', 1, 'Atividade 7 : Tudo o que o seu mestre mandar… ', '../gifsExercicios/mestreMandou.gif', 'Número de participantes: a partir de 2. Um participante deve ser nomeado o mestre, que fica em frente aos demais, e ordena que imitem os seus gestos, dizendo: “O mestre mandou…”. Porém, as crianças só devem imitar se o mestre disser essa frase antes de indicar o gesto. O jogador que imitar sem ouvir “o mestre mandou”, é eliminado.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('9', 1, 'Atividade 6 : Esconde-esconde ', '../gifsExercicios/escondeEsconde.gif', 'Esconde-esconde, pique-esconde ou escondidas é uma brincadeira infantil, na qual enquanto uma pessoa (o pegue) fica com os olhos fechados contando até certo número combinado com os participantes, geralmente com o número de pessoas que estão participando (5 pessoas = 50), os demais participantes se escondem.');">
+    <img  src="../images/Escada/checkpoint.png">
+  </div>
+
+  <div class="indice" onclick="funcaoAtividade1('10', 1, 'Atividade 11 : Caçada ao tesouro ', '../gifsExercicios/cacaTesouro.gif', 'Número de participantes: a partir de 2. Deixe uma prenda escondida em algum lugar do ambiente. Em locais diferentes, coloque papéis que contenham as pistas que levarão ao tesouro. A primeira deve levar os participantes à segunda e assim sucessivamente até chegar na última, que será o prêmio. Esse jogo pode ser individual ou em equipe.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('11', 1, 'Atividade 12 : Corrida ', '../gifsExercicios/corrida.gif', 'A um sinal dado, os jogadores deverão depositar a laranja ou a bola em local determinado.Será vencedor aquele que executar a tarefa primeiro.');">
+    <p>  </p>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('12', 1, 'Atividade 13 : Corrida ', '../gifsExercicios/corrida.gif', 'A um sinal dado, os jogadores deverão depositar a laranja ou a bola em local determinado.Será vencedor aquele que executar a tarefa primeiro.');">
+    <p>  </p>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('13', 1, 'Atividade 14 : Corrida ', '../gifsExercicios/corrida.gif', 'A um sinal dado, os jogadores deverão depositar a laranja ou a bola em local determinado.Será vencedor aquele que executar a tarefa primeiro.');">
+    <p>  </p>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('14', 1, 'Atividade 15 : Corrida ', '../gifsExercicios/corrida.gif', 'A um sinal dado, os jogadores deverão depositar a laranja ou a bola em local determinado.Será vencedor aquele que executar a tarefa primeiro.');">
+    <p>  </p>
+  </div>
+
+  
+  <div class="indice" onclick="funcaoAtividade1('15', 1, 'Atividade 12 : Cabo de guerra ', '../gifsExercicios/caboDeGuerra.gif', 'Número de participantes: de 2 a 10. Divida as crianças em dois times. Cada um ficará de um lado do campo e segurando um lado da corda. Ao sinal, cada time puxa para o seu lado, com toda força. Ganha a equipe que ficar por pelo menos um minuto com a maior parte da corda.');">
+    <img src="../images/Escada/checkpoint.png">
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('16', 1, 'Atividade 13 : Pula-rio ', '../gifsExercicios/saltaRio.gif', 'Número de participantes: de 2 a 8. Estique duas cordas no chão, paralelamente, com intervalo de 50 centímetros entre elas. Esse espaço representará o rio. Os participantes devem fazer uma fila de um lado do rio, e um por vez, saltarem para o outro lado. A cada rodada, aumente a largura do rio. São eliminadas as crianças que “caírem na água”. O que sobrar, vence.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('17', 1, 'Atividade 14 : Stop ', '../gifsExercicios/stopGif.gif', 'Número de participantes: a partir de 2. Cada participante pega uma folha sulfite e divide em 5 colunas denominadas: nome, cor, fruta, animal e local. A cada rodada, um participante escolhe uma letra. Quem preencher primeiro todos os campos, com uma palavra para cada coluna, começando com a letra determinada, deve dizer Stop e todos os outros param de escrever. A cada resposta igual, os participantes levam 5 pontos. Se forem diferentes, 10 pontos. E se os outros não tiverem colocado nada, 15 pontos.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('18', 1, 'Atividade 15 : Dança das cadeiras ', '../gifsExercicios/dancaDasCadeiras.gif', 'Número de participantes: a partir de 4. Separe algumas cadeiras, de acordo com o número de pessoas, menos um. Em uma fila indiana, os participantes devem circular pelas cadeiras, com as mãos para trás e ao som de uma música. Quando a música parar, elas devem se sentar na cadeira mais próxima. Quem ficou de pé é eliminado e uma cadeira deve ser retirada. Vence quem sentar na única cadeira que restar.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+  <div class="indice" onclick="funcaoAtividade1('19', 1, 'Atividade 16 : Quem sou eu? ', '../gifsExercicios/quemSouEu.gif', 'Número de participantes: a partir de 3. Os jogadores devem ficar numa roda, e cada um escolhe o nome de uma celebridade, personagem de filme ou desenho, ou mesmo do convívio delas, escreve num papel e gruda na testa do participante da direita, sem que ele veja. Cada criança faz perguntas para os outros jogadores sobre o que ela é. Por exemplo: eu sou uma mulher? E os jogadores só podem responder sim ou não. A criança então tem uma chance de dar um palpite. Ganha quem acertar primeiro.');">
+    <i class="fas fa-check-circle"></i>
+  </div>
+
+</section>
+
+<section id="res">
+
+</section>
+
+<section id="crono1">
+
+</section>
+<section id="crono">
+
+</section>
+
+</br>
+<button id="finalizar" value="1" class="btn btn-outline-success" style="width: 100%; display: none;">Finalizar</button>
+
+<div id="legenda-atividade">
+
+</div>
+
+<footer>
+    <div id="copyrigth">
+      <a>Copyrigth LIFE ❤ UP</a>
+    </div>
+</footer>
+
+<script>
+  function initSport(){
+	let dbTeste = JSON.parse(localStorage.getItem('db_results_real2'));
+	if (!dbTeste) {
+		window.location.href = "../index.html";
+	};
+    funcaoReiderizarNovoFrame();
+  }
+</script>
+<script src="./escada.js"></script>
+</body>
+</html>
